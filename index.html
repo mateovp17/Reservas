@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Reservas | Restaurante Sol y Luna</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header>
+  <h1>Restaurante Sol y Luna</h1>
+  <p>Reserva tu mesa online</p>
+</header>
+
+<main>
+<section class="reserva">
+  <h2>Reserva tu mesa</h2>
+
+  <form id="formReserva">
+    <label>Fecha:
+      <input type="date" id="fecha" required>
+    </label>
+
+    <label>Hora:
+      <select id="hora" required>
+        <option value="">Selecciona una hora</option>
+      </select>
+    </label>
+
+    <label>Número de personas:
+      <input type="number" id="personas" min="1" max="50" required>
+    </label>
+
+    <label>Nombre:
+      <input type="text" id="nombre" required>
+    </label>
+
+    <label>Teléfono:
+      <input type="tel" id="telefono" required>
+    </label>
+
+    <label>Email:
+      <input type="email" id="email">
+    </label>
+
+    <label>Comentarios:
+      <textarea id="comentarios" placeholder="Alergias, peticiones especiales..."></textarea>
+    </label>
+
+    <button type="submit">Reservar mesa</button>
+  </form>
+
+  <div id="mensaje"></div>
+
+  <!-- RESUMEN VISUAL -->
+  <div id="resumenReserva" style="display:none;">
+    <h3>Resumen de tu reserva</h3>
+    <p id="resumenTexto"></p>
+    <button id="aceptarReserva">Confirmar</button>
+    <button id="cancelarReserva">Cancelar</button>
+  </div>
+</section>
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>
