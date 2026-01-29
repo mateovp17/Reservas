@@ -113,6 +113,23 @@ if(form){
     resumenDiv.style.display="none";
     reservaTemp=null;
   });
+
+  if (reservaTemp.email) {
+  emailjs.send("service_uom9hr8", "template_qtz0gfi", {
+    nombre: reservaTemp.nombre,
+    email: reservaTemp.email,
+    fecha: reservaTemp.fecha,
+    hora: reservaTemp.hora,
+    personas: reservaTemp.personas
+  })
+  .then(() => {
+    console.log("📧 Correo enviado correctamente");
+  })
+  .catch(error => {
+    console.error("❌ Error al enviar correo", error);
+  });
+}
+
 }
 
 // --- PANEL ADMIN ---
